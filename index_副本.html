@@ -192,13 +192,15 @@
             <a href="#login">登录</a> | <a href="#register">注册</a>
         </div>
     </nav>
-    <div class="pdd-banner">
+    <div class="pdd-banner" style="background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); position: relative;">
         <div class="pdd-banner-waves">
             <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,80 C360,160 1080,0 1440,80 L1440,120 L0,120 Z" fill="#fff" fill-opacity="0.5"><animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0,80 C360,160 1080,0 1440,80 L1440,120 L0,120 Z;M0,60 C400,120 1040,40 1440,100 L1440,120 L0,120 Z;M0,80 C360,160 1080,0 1440,80 L1440,120 L0,120 Z"/></path></svg>
         </div>
         <div class="pdd-banner-glow"></div>
+        <div style="position:absolute;top:30px;left:50%;transform:translateX(-50%);color:#fff;font-size:2.2em;font-weight:bold;text-shadow:0 2px 12px #ff6f91;letter-spacing:2px;">欢迎来到五彩缤纷的拼多多风格站点！</div>
+        <div style="position:absolute;top:90px;left:50%;transform:translateX(-50%);color:#fff;font-size:1.1em;text-shadow:0 1px 6px #845ec2;">在这里，发现更多有趣好物，享受多彩生活！</div>
     </div>
-    <div class="pdd-categories">
+    <div class="pdd-categories" style="background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%); box-shadow: 0 2px 12px #fbc2eb99;">
         <div class="pdd-category pdd-gradient-icon" onclick="ripple(event)">
             <div class="pdd-category-icon">🍎</div>
             <span>水果</span>
@@ -221,23 +223,26 @@
         </div>
     </div>
     <div class="pdd-products">
-        <div class="pdd-product-card animated-card pdd-3d-card">
+        <div class="pdd-product-card animated-card" style="border:2px solid #ff6f91;box-shadow:0 2px 12px #ff6f9144;background:linear-gradient(135deg,#fbc2eb 0%,#a1c4fd 100%);">
             <img src="assets/img/1.png" class="pdd-product-img" alt="商品1">
             <div class="pdd-product-title">精选优质水果礼盒</div>
-            <div class="pdd-product-price">¥29.9</div>
-            <button class="pdd-product-btn pdd-glow-btn">去拼单</button>
+            <div class="pdd-product-price">￥29.9</div>
+            <button class="pdd-product-btn">去拼单</button>
+            <div style="margin-top:8px;color:#845ec2;font-size:0.95em;">新鲜美味，健康生活的首选！</div>
         </div>
-        <div class="pdd-product-card animated-card pdd-3d-card">
+        <div class="pdd-product-card animated-card" style="border:2px solid #f9f871;box-shadow:0 2px 12px #f9f87144;background:linear-gradient(135deg,#f9f871 0%,#32e2b8 100%);">
             <img src="assets/img/2.png" class="pdd-product-img" alt="商品2">
             <div class="pdd-product-title">时尚潮流T恤</div>
-            <div class="pdd-product-price">¥39.9</div>
-            <button class="pdd-product-btn pdd-glow-btn">去拼单</button>
+            <div class="pdd-product-price">￥39.9</div>
+            <button class="pdd-product-btn">去拼单</button>
+            <div style="margin-top:8px;color:#ff6f91;font-size:0.95em;">多色可选，穿出你的个性！</div>
         </div>
-        <div class="pdd-product-card animated-card pdd-3d-card">
+        <div class="pdd-product-card animated-card" style="border:2px solid #32e2b8;box-shadow:0 2px 12px #32e2b844;background:linear-gradient(135deg,#c2ffd8 0%,#845ec2 100%);">
             <img src="assets/img/3.png" class="pdd-product-img" alt="商品3">
             <div class="pdd-product-title">智能家居小夜灯</div>
-            <div class="pdd-product-price">¥19.9</div>
-            <button class="pdd-product-btn pdd-glow-btn">去拼单</button>
+            <div class="pdd-product-price">￥19.9</div>
+            <button class="pdd-product-btn">去拼单</button>
+            <div style="margin-top:8px;color:#f9f871;font-size:0.95em;">温馨夜晚，点亮你的生活！</div>
         </div>
     </div>
     <div class="snake-game-section">
@@ -245,8 +250,11 @@
         <canvas id="snake-canvas" width="320" height="320"></canvas>
         <div class="snake-tip">方向键控制，刷新可重玩</div>
     </div>
-    <div class="pdd-footer">
-        © 2024 拼多多风格演示页 | 仅供学习交流
+    <div class="pdd-footer" style="background:linear-gradient(90deg,#845ec2 0%,#f9f871 100%);color:#fff;text-shadow:0 1px 6px #845ec2;">
+        <div style="font-size:1.1em;font-weight:bold;">感谢您的访问，欢迎常来发现更多精彩！</div>
+        <div style="margin-top:8px;">本站致力于为您带来丰富多彩的商品与体验，拼出生活新乐趣！</div>
+        <div style="margin-top:8px;">如有建议或合作意向，欢迎随时联系我们。</div>
+        <div style="margin-top:8px;font-size:0.95em;">&copy; 2024 五彩拼多多风格站点. 保留所有权利.</div>
     </div>
     <script src="assets/js/snake.js"></script>
     <script>

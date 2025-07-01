@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f5f5f5;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 25%, #fbc2eb 50%, #a1c4fd 75%, #c2ffd8 100%);
     font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
     margin: 0;
     color: #222;
@@ -40,9 +40,9 @@ body.page-loaded {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 2px solid #fcb69f;
     z-index: 1000;
     padding: 20px 0;
 }
@@ -68,15 +68,16 @@ body.page-loaded {
 }
 
 .nav-link {
-    color: #1a1a1a;
+    color: #ff6f91;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 400;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 .nav-link:hover {
-    color: #666;
+    color: #845ec2;
+    text-shadow: 0 2px 8px #f9f871;
 }
 
 /* 主要内容区域 */
@@ -88,7 +89,8 @@ body.page-loaded {
 .hero {
     padding: 120px 0 80px;
     text-align: center;
-    background: #fafafa;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    color: #fff;
 }
 
 .hero-content {
@@ -99,9 +101,12 @@ body.page-loaded {
 
 .hero-title {
     font-size: 48px;
-    font-weight: 300;
+    font-weight: 700;
     margin-bottom: 20px;
-    letter-spacing: -1px;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff6f91, #f9f871, #32e2b8, #845ec2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
@@ -139,25 +144,29 @@ body.page-loaded {
 }
 
 .btn-primary {
-    background: #1a1a1a;
+    background: linear-gradient(90deg, #ff6f91 0%, #f9f871 100%);
     color: #fff;
-    border: 1px solid #1a1a1a;
+    border: none;
+    box-shadow: 0 2px 8px #ff6f9155;
 }
 
 .btn-primary:hover {
-    background: #333;
-    border-color: #333;
+    background: linear-gradient(90deg, #845ec2 0%, #32e2b8 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px #845ec255;
 }
 
 .btn-secondary {
-    background: transparent;
-    color: #1a1a1a;
-    border: 1px solid #1a1a1a;
+    background: linear-gradient(90deg, #f9f871 0%, #32e2b8 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px #32e2b855;
 }
 
 .btn-secondary:hover {
-    background: #1a1a1a;
+    background: linear-gradient(90deg, #ff6f91 0%, #845ec2 100%);
     color: #fff;
+    box-shadow: 0 4px 16px #ff6f9155;
 }
 
 /* 区块标题 */
@@ -169,9 +178,12 @@ body.page-loaded {
 
 .section-header h2 {
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 700;
     margin-bottom: 10px;
     letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #ff6f91, #f9f871, #32e2b8, #845ec2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .section-header p {
@@ -182,7 +194,7 @@ body.page-loaded {
 /* 精选作品 */
 .featured-works {
     padding: 80px 0;
-    background: #fff;
+    background: linear-gradient(120deg, #c2ffd8 0%, #fbc2eb 100%);
 }
 
 .works-grid {
@@ -196,14 +208,15 @@ body.page-loaded {
 
 .work-item {
     background: #fff;
-    border: 1px solid #e5e5e5;
+    border: 2px solid #ff6f91;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    box-shadow: 0 2px 12px #ff6f9144;
 }
 
 .work-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #845ec2;
+    box-shadow: 0 6px 24px #845ec244;
 }
 
 .work-image {
@@ -288,7 +301,7 @@ body.page-loaded {
 
 /* 页脚 */
 .footer {
-    background: #1a1a1a;
+    background: linear-gradient(90deg, #845ec2 0%, #f9f871 100%);
     color: #fff;
     padding: 40px 0;
     margin-top: 80px;
@@ -315,10 +328,12 @@ body.page-loaded {
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
+    text-shadow: 0 1px 4px #845ec2;
 }
 
 .footer-links a:hover {
-    color: #ccc;
+    color: #ff6f91;
+    text-shadow: 0 2px 8px #f9f871;
 }
 
 /* 通用样式 */
