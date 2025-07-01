@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拼多多风格首页</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        body { background: #f5f5f5; margin: 0; font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; opacity: 0; transition: opacity 1.2s cubic-bezier(.4,2,.3,1); }
+        body.page-loaded { opacity: 1; }
+        .pdd-navbar {
+            background: #e02e24;
+            color: #fff;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 18px;
+            box-shadow: 0 2px 8px #f7d6d4;
+        }
+        .pdd-logo {
+            font-size: 1.7em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+        .pdd-search {
+            flex: 1;
+            margin: 0 16px;
+            display: flex;
+        }
+        .pdd-search input {
+            width: 100%;
+            border: none;
+            border-radius: 18px 0 0 18px;
+            padding: 8px 14px;
+            font-size: 1em;
+            outline: none;
+        }
+        .pdd-search button {
+            background: #fff;
+            color: #e02e24;
+            border: none;
+            border-radius: 0 18px 18px 0;
+            padding: 8px 18px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .pdd-navbar .pdd-auth {
+            margin-left: 12px;
+        }
+        .pdd-navbar .pdd-auth a {
+            color: #fff;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .pdd-navbar .pdd-auth a:hover {
+            text-decoration: underline;
+        }
+        .pdd-banner {
+            width: 100%;
+            height: 180px;
+            background: url('assets/img/1.png') center/cover no-repeat;
+            border-radius: 0 0 18px 18px;
+            margin-bottom: 18px;
+        }
+        .pdd-banner-waves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .pdd-banner-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 0 0 18px 18px;
+            pointer-events: none;
+        }
+        .pdd-categories {
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            border-radius: 12px;
+            margin: 0 12px 18px 12px;
+            padding: 16px 0;
+            box-shadow: 0 2px 8px #f7d6d4;
+        }
+        .pdd-category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.98em;
+            color: #e02e24;
+        }
+        .pdd-category-icon {
+            width: 38px;
+            height: 38px;
+            background: #fff0ef;
+            border-radius: 50%;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+        .pdd-products {
+            max-width: 900px;
+            margin: 0 auto 24px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+        .pdd-product-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #f7d6d4;
+            padding: 12px 12px 16px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.2s;
+        }
+        .pdd-product-card:hover {
+            box-shadow: 0 4px 16px #e02e2422;
+        }
+        .pdd-product-img {
+            width: 100%;
+            max-width: 160px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .pdd-product-title {
+            font-size: 1.1em;
+            color: #222;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .pdd-product-price {
+            color: #e02e24;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .pdd-product-btn {
+            background: #e02e24;
+            color: #fff;
+            border: none;
+            border-radius: 18px;
+            padding: 8px 28px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .pdd-product-btn:hover {
+            background: #b81d13;
+        }
+        .pdd-footer {
+            background: #fff;
+            color: #888;
+            text-align: center;
+            padding: 18px 0 12px 0;
+            font-size: 15px;
+            border-top: 1px solid #f7d6d4;
+            border-radius: 18px 18px 0 0;
+        }
+        @media (max-width: 700px) {
+            .pdd-categories { flex-wrap: wrap; }
+            .pdd-products { grid-template-columns: 1fr; }
+            .pdd-banner { height: 120px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="pdd-navbar">
+        <div class="pdd-logo">拼多多</div>
+        <div class="pdd-search">
+            <input type="text" placeholder="搜索商品/服务...">
+            <button class="pdd-glow-btn">搜索</button>
+        </div>
+        <div class="pdd-auth">
+            <a href="#login">登录</a> | <a href="#register">注册</a>
+        </div>
+    </nav>
+    <div class="pdd-banner">
+        <div class="pdd-banner-waves">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,80 C360,160 1080,0 1440,80 L1440,120 L0,120 Z" fill="#fff" fill-opacity="0.5"><animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0,80 C360,160 1080,0 1440,80 L1440,120 L0,120 Z;M0,60 C400,120 1040,40 1440,100 L1440,120 L0,120 Z;M0,80 C360,160 1080,0 1440,80 L1440,120 L0,120 Z"/></path></svg>
+        </div>
+        <div class="pdd-banner-glow"></div>
+    </div>
+    <div class="pdd-categories">
+        <div class="pdd-category pdd-gradient-icon" onclick="ripple(event)">
+            <div class="pdd-category-icon">🍎</div>
+            <span>水果</span>
+        </div>
+        <div class="pdd-category pdd-gradient-icon" onclick="ripple(event)">
+            <div class="pdd-category-icon">👕</div>
+            <span>服饰</span>
+        </div>
+        <div class="pdd-category pdd-gradient-icon" onclick="ripple(event)">
+            <div class="pdd-category-icon">🏠</div>
+            <span>家居</span>
+        </div>
+        <div class="pdd-category pdd-gradient-icon" onclick="ripple(event)">
+            <div class="pdd-category-icon">📱</div>
+            <span>数码</span>
+        </div>
+        <div class="pdd-category pdd-gradient-icon" onclick="ripple(event)">
+            <div class="pdd-category-icon">🍚</div>
+            <span>美食</span>
+        </div>
+    </div>
+    <div class="pdd-products">
+        <div class="pdd-product-card animated-card pdd-3d-card">
+            <img src="assets/img/1.png" class="pdd-product-img" alt="商品1">
+            <div class="pdd-product-title">精选优质水果礼盒</div>
+            <div class="pdd-product-price">¥29.9</div>
+            <button class="pdd-product-btn pdd-glow-btn">去拼单</button>
+        </div>
+        <div class="pdd-product-card animated-card pdd-3d-card">
+            <img src="assets/img/2.png" class="pdd-product-img" alt="商品2">
+            <div class="pdd-product-title">时尚潮流T恤</div>
+            <div class="pdd-product-price">¥39.9</div>
+            <button class="pdd-product-btn pdd-glow-btn">去拼单</button>
+        </div>
+        <div class="pdd-product-card animated-card pdd-3d-card">
+            <img src="assets/img/3.png" class="pdd-product-img" alt="商品3">
+            <div class="pdd-product-title">智能家居小夜灯</div>
+            <div class="pdd-product-price">¥19.9</div>
+            <button class="pdd-product-btn pdd-glow-btn">去拼单</button>
+        </div>
+    </div>
+    <div class="snake-game-section">
+        <h2 class="snake-title">🎮 贪吃蛇小游戏</h2>
+        <canvas id="snake-canvas" width="320" height="320"></canvas>
+        <div class="snake-tip">方向键控制，刷新可重玩</div>
+    </div>
+    <div class="pdd-footer">
+        © 2024 拼多多风格演示页 | 仅供学习交流
+    </div>
+    <script src="assets/js/snake.js"></script>
+    <script>
+    // 页面整体渐现
+    window.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('page-loaded');
+        // 商品卡片依次飞入动画
+        const cards = document.querySelectorAll('.animated-card');
+        cards.forEach((card, i) => {
+            setTimeout(() => {
+                card.classList.add('show');
+            }, 200 + i * 200);
+        });
+    });
+    // 分类icon点击涟漪动画
+    function ripple(e) {
+        const el = e.currentTarget;
+        let ripple = el.querySelector('.ripple');
+        if (ripple) ripple.remove();
+        ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        el.appendChild(ripple);
+        const d = Math.max(el.offsetWidth, el.offsetHeight);
+        ripple.style.width = ripple.style.height = d + 'px';
+        ripple.style.left = (e.offsetX - d/2) + 'px';
+        ripple.style.top = (e.offsetY - d/2) + 'px';
+        ripple.classList.add('ripple-animate');
+        ripple.addEventListener('animationend', () => ripple.remove());
+    }
+    </script>
+</body>
+</html> 

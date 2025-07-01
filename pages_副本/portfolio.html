@@ -1,0 +1,38 @@
+// ... existing code ...
+    <div class="pdd-banner">
+        <div class="pdd-banner-glow"></div>
+    </div>
+// ... existing code ...
+    <div class="pdd-products">
+        <div class="pdd-product-card animated-card">
+            <img src="assets/img/1.png" class="pdd-product-img" alt="商品1">
+            <div class="pdd-product-title">精选优质水果礼盒</div>
+            <div class="pdd-product-price">¥29.9</div>
+            <button class="pdd-product-btn">去拼单</button>
+        </div>
+        <div class="pdd-product-card animated-card">
+            <img src="assets/img/2.png" class="pdd-product-img" alt="商品2">
+            <div class="pdd-product-title">时尚潮流T恤</div>
+            <div class="pdd-product-price">¥39.9</div>
+            <button class="pdd-product-btn">去拼单</button>
+        </div>
+        <div class="pdd-product-card animated-card">
+            <img src="assets/img/3.png" class="pdd-product-img" alt="商品3">
+            <div class="pdd-product-title">智能家居小夜灯</div>
+            <div class="pdd-product-price">¥19.9</div>
+            <button class="pdd-product-btn">去拼单</button>
+        </div>
+    </div>
+// ... existing code ...
+    <script>
+    // 商品卡片依次飞入动画
+    window.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.animated-card');
+        cards.forEach((card, i) => {
+            setTimeout(() => {
+                card.classList.add('show');
+            }, 200 + i * 200);
+        });
+    });
+    </script>
+// ... existing code ...
